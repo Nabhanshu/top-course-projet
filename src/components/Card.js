@@ -14,7 +14,7 @@ function Card({course,likedcourse,setlikedcourse}) {
     if(likedcourse.includes(course.id)){
       // phle s liked h toh unlike krna h mtlb array s bhr krna h we use filtering in this case
       setlikedcourse((prev)=> prev.filter( (cid)=>  { return cid!=course.id }) )//filter or map dono function m return krana pdega agr=>{} agr in bracket ka use kiya varna bina returb krya kaam  chl jayega   
-      toast.warning("unliked krta h madarchod")
+      toast.warning("unliked ")
     }
 
     else{
@@ -25,7 +25,7 @@ function Card({course,likedcourse,setlikedcourse}) {
       else{
         setlikedcourse((prev)=>[...prev,course.id])
       }
-      toast.success("liked hua ")
+      toast.success("liked ")
 
     }
 
